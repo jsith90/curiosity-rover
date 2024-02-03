@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Rover Photos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+   <header>
+    <h1>we have seen the face of Mars, a beautiful, cold and desert face, scarred and deep</h1>
+   </header>
+   <main class="grid-container">
+    <!-- <section class="grid-item grid-item"></section> -->
+    <section class="image-generator grid-item">
+        <div id="image-container">
+            <div id="marsImagesContainer"></div>
+        </div>
+    </section>
+    <section class="button-selector grid-item">
+        <label for="solInput">enter a solar day[sol] from Curiosity's solar diary [active between sol 29 and 4074]:</label>
+        <input type="number" id="solInput" min="29" value="4074" placeholder="29"> 
+        <button class="mrButton" onclick="fetchMarsPhotos()">Get Photos</button>
+    </section>
+    <section class="rover-info grid-container-2">
+        <div class="grid-item item-1">
+            <div>earth_day: <span id="earthDateContainer"></span></div>
+            <div>rover_name: <span id="roverNameContainer"></span></div>
+            <div>mars_landing_date: <span id="roverLandingContainer"></span></div>
+        </div>
+        <div class="grid-item item-2">
+            <div>rover_launch_date: <span id="roverLaunchContainer"></span></div>
+            <div>camera_name: <span id="cameraNameContainer"></span></div>
+            <div>rover_status: <span id="statusContainer"></span></div>
+        </div>
+    </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
